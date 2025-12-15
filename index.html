@@ -211,6 +211,17 @@
         justify-content: center;
         position: relative;
         padding: 2rem;
+        overflow: hidden;
+      }
+
+      #bubbles {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
       }
 
       .bubble {
@@ -1604,6 +1615,7 @@
           "Ascend nano co., ltd,",
           "Full-Stack Developer",
           "Tech Enthusiast",
+          "Coding is my passion",
         ];
         let textIndex = 0;
         let charIndex = 0;
