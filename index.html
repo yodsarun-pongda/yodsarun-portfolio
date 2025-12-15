@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yodsarun - Portfolio</title>
+    <!-- SEO -->
+    <title>Yodsarun Pongda | Full-Stack Engineer (Kotlin, Spring Boot, React)</title>
+    <meta name="description" content="Portfolio ของ Yodsarun Pongda (James) — Full-Stack Software Engineer สาย Kotlin/Spring Boot/React รวมโปรเจกต์ ประสบการณ์ ทักษะ และช่องทางติดต่อ" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.yodsarun.online/" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yodsarun Pongda",
+      "alternateName": "James",
+      "url": "https://www.yodsarun.online/",
+      "jobTitle": "Full-Stack Software Engineer",
+      "sameAs": [
+        "https://github.com/yodsarun-pongda"
+      ]
+    }
+    </script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Font -->
     <link
@@ -499,7 +517,7 @@
       .about-image {
         width: 100%;
         max-width: 350px;
-        height: 500px;
+        height: 600px;
         border-radius: 2rem;
         /* background: linear-gradient(135deg, #9333ea, #ec4899); */
         display: flex;
@@ -528,6 +546,30 @@
         border-radius: 2rem;
         object-fit: cover;
         display: block;
+      }
+
+      .about-image .swiper-button-prev,
+      .about-image .swiper-button-next {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 9999px;
+        color: white;
+        background: transparent;
+        opacity: 0;
+        transition: all 0.2s ease;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+
+      .about-image:hover .swiper-button-prev,
+      .about-image:hover .swiper-button-next {
+        opacity: 1;
+        pointer-events: auto;
+        background: transparent;
+        border-color: unset;
       }
 
       .about-content h3 {
@@ -596,8 +638,8 @@
         }
 
         .about-image {
-          max-width: 250px;
-          height: 250px;
+          max-width: 350px;
+          height: 350px;
           font-size: 7rem;
         }
 
@@ -994,9 +1036,23 @@
                     alt="yodsarun-img-06"
                   />
                 </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://lh5.googleusercontent.com/d/1AqfTgCfi1bxZIIaRh7rfhBOOSfnupkX7"
+                    alt="yodsarun-img-07"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://lh5.googleusercontent.com/d/1ZNCcV_Zto89So78jOLKK47e4HSVANGeu"
+                    alt="yodsarun-img-08"
+                  />
+                </div>
               </div>
               <!-- Optional: Pagination dots -->
               <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
 
@@ -1055,18 +1111,18 @@
           <div class="skill-tag">⭐️⭐️ Java</div>
           <div class="skill-tag">⭐️⭐️ Kotlin</div>
           <div class="skill-tag">⭐️⭐️ String boot</div>
+          <div class="skill-tag">⭐️⭐️ Mysql</div>
           <div class="skill-tag">⭐️ React</div>
           <div class="skill-tag">⭐️ Python</div>
+          <div class="skill-tag">JavaScript</div>
           <div class="skill-tag">Backend Development</div>
           <div class="skill-tag">Full-Stack Development</div>
-          <div class="skill-tag">JavaScript</div>
           <div class="skill-tag">TypeScript</div>
           <div class="skill-tag">Node.js</div>
           <div class="skill-tag">Docker</div>
           <div class="skill-tag">Kubernetes</div>
           <div class="skill-tag">AWS</div>
           <div class="skill-tag">PostgreSQL</div>
-          <div class="skill-tag">Mysql</div>
           <div class="skill-tag">Messaging mechanism</div>
           <div class="skill-tag">Elastic search</div>
           <div class="skill-tag">Git</div>
@@ -1309,7 +1365,7 @@
                 <div class="project-card">
                   <div class="project-icon">🌐</div>
                   <div class="project-title">
-                    Baanchangphab — Online Business Card
+                    Baan chang phab Studio — Online Business Card Project
                   </div>
                   <p class="project-description">
                     Personal online business-card website built end-to-end —
@@ -1320,9 +1376,11 @@
                     <span class="tech-tag">React.js</span>
                     <span class="tech-tag">TypeScript</span>
                     <span class="tech-tag">Java</span>
-                    <span class="tech-tag">Kotlin</span>
                     <span class="tech-tag">Spring Boot</span>
                     <span class="tech-tag">Infrastructure</span>
+                    <span class="tech-tag">UI/UX Design</span>
+                    <span class="tech-tag">Full-Stack Development</span>
+                    <span class="tech-tag">SEO management</span>
                   </div>
                   <div style="text-align: center">
                     <a
@@ -1704,6 +1762,11 @@
 
           pagination: {
             el: ".swiper-pagination",
+          },
+
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
         });
 
